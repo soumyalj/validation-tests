@@ -1,0 +1,79 @@
+version: '2'
+services:
+  test4:
+    image: ubuntu
+    stdin_open: true
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always
+  test5:
+    image: ubuntu
+    stdin_open: true
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always
+  test2:
+    image: nginx
+    stdin_open: true
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always
+  test3:
+    image: ubuntu
+    stdin_open: true
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always
+  test8:
+    image: busybox
+    stdin_open: true
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always
+  test9:
+    image: busybox
+    stdin_open: true
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always
+  test6:
+    image: ubuntu
+    stdin_open: true
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always
+  test10:
+    image: busybox
+    stdin_open: true
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always
+  test7:
+    image: ubuntu
+    stdin_open: true
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always
+  test1:
+    image: nginx
+    stdin_open: true
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always
+  testlb2:
+    image: rancher/lb-service-haproxy:v0.7.15
+    ports:
+    - 9002:9002/tcp
+    labels:
+      io.rancher.container.agent.role: environmentAdmin,agent
+      io.rancher.container.agent_service.drain_provider: 'true'
+      io.rancher.container.create_agent: 'true'
+  testlb1:
+    image: rancher/lb-service-haproxy:v0.7.15
+    ports:
+    - 9001:9001/tcp
+    labels:
+      io.rancher.container.agent.role: environmentAdmin,agent
+      io.rancher.container.agent_service.drain_provider: 'true'
+      io.rancher.container.create_agent: 'true'
+

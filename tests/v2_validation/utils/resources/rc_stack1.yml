@@ -1,0 +1,24 @@
+version: '2'
+services:
+  testglobalnginx1:
+    start_on_create: true
+  testglobalubuntu:
+    start_on_create: true
+  testglobalnginx2:
+    start_on_create: true
+  testglobalbusybox:
+    start_on_create: true
+  testglobalnginx:
+    start_on_create: true
+  testubuntu:
+    scale: 10
+    start_on_create: true
+  testglobalubuntu2:
+    start_on_create: true
+  testglobalbusybox2:
+    start_on_create: true
+  testglobalubuntu1:
+    start_on_create: true
+  testglobalbusybox1:
+    start_on_create: true
+

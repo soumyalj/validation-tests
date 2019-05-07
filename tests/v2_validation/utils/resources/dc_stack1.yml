@@ -1,0 +1,72 @@
+version: '2'
+services:
+  testglobalnginx1:
+    image: nginx
+    stdin_open: true
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always
+      io.rancher.scheduler.global: 'true'
+  testglobalubuntu:
+    image: ubuntu
+    stdin_open: true
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always
+      io.rancher.scheduler.global: 'true'
+  testglobalnginx2:
+    image: nginx
+    stdin_open: true
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always
+      io.rancher.scheduler.global: 'true'
+  testglobalbusybox:
+    image: busybox
+    stdin_open: true
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always
+      io.rancher.scheduler.global: 'true'
+  testglobalnginx:
+    image: nginx
+    stdin_open: true
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always
+      io.rancher.scheduler.global: 'true'
+  testubuntu:
+    image: ubuntu
+    stdin_open: true
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always
+  testglobalubuntu2:
+    image: ubuntu
+    stdin_open: true
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always
+      io.rancher.scheduler.global: 'true'
+  testglobalbusybox2:
+    image: busybox
+    stdin_open: true
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always
+      io.rancher.scheduler.global: 'true'
+  testglobalubuntu1:
+    image: ubuntu
+    stdin_open: true
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always
+      io.rancher.scheduler.global: 'true'
+  testglobalbusybox1:
+    image: busybox
+    stdin_open: true
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always
+      io.rancher.scheduler.global: 'true'
+

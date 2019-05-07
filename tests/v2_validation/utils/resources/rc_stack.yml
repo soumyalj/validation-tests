@@ -1,0 +1,73 @@
+version: '2'
+services:
+  test4:
+    scale: 12
+    start_on_create: true
+  test5:
+    scale: 12
+    start_on_create: true
+  test2:
+    scale: 12
+    start_on_create: true
+  test3:
+    scale: 12
+    start_on_create: true
+  test8:
+    scale: 12
+    start_on_create: true
+  test9:
+    scale: 12
+    start_on_create: true
+  test6:
+    scale: 12
+    start_on_create: true
+  test10:
+    scale: 12
+    start_on_create: true
+  test7:
+    scale: 12
+    start_on_create: true
+  test1:
+    scale: 12
+    start_on_create: true
+  testlb2:
+    scale: 1
+    start_on_create: true
+    lb_config:
+      certs: []
+      port_rules:
+      - path: ''
+        priority: 1
+        protocol: http
+        service: test2
+        source_port: 9002
+        target_port: 80
+    health_check:
+      healthy_threshold: 2
+      response_timeout: 2000
+      port: 42
+      unhealthy_threshold: 3
+      initializing_timeout: 60000
+      interval: 2000
+      reinitializing_timeout: 60000
+  testlb1:
+    scale: 1
+    start_on_create: true
+    lb_config:
+      certs: []
+      port_rules:
+      - path: ''
+        priority: 1
+        protocol: http
+        service: test1
+        source_port: 9001
+        target_port: 80
+    health_check:
+      healthy_threshold: 2
+      response_timeout: 2000
+      port: 42
+      unhealthy_threshold: 3
+      initializing_timeout: 60000
+      interval: 2000
+      reinitializing_timeout: 60000
+
